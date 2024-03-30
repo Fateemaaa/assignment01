@@ -10,15 +10,15 @@ pipeline {
 
         stage('Build Image') {
             steps {
-                sh 'docker build -t a1_image .'
+                bat 'docker build -t a1_image .'
             }
         }
 
-        stage('Push to Docker Hub') {
+        stage('Pubat to Docker Hub') {
             steps {
-                sh 'docker login'
-                sh 'docker tag a1_image Fateemaaa/assignment01:first_tag'
-                sh 'docker push Fateemaaa/assignment01:first_tag'
+                bat 'docker login'
+                bat 'docker tag a1_image Fateemaaa/assignment01:first_tag'
+                bat 'docker push Fateemaaa/assignment01:first_tag'
             }
         }
     }
