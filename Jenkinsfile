@@ -14,12 +14,5 @@ pipeline {
             }
         }
 
-        stage('Pubat to Docker Hub') {
-            steps {
-                bat 'docker login'
-                bat 'docker tag a1_image Fateemaaa/assignment01:first_tag'
-                bat 'docker push Fateemaaa/assignment01:first_tag'
-            }
-        }
     }
 }
