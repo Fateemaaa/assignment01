@@ -21,19 +21,21 @@ def predict():
 
     # Convert the input data into a numpy array
     input_data = [[
-        data['alcohol'], data['malic_acid'],
-        data['ash'],
-        data['alcalinity_of_ash'],
-        data['magnesium'],
-        data['total_phenols'],
-        data['flavanoids'],
-        data['nonflavanoid_phenols'],
-        data['proanthocyanins'],
-        data['color_intensity'],
-        data['hue'],
-        data['od280/od315_of_diluted_wines'],
-        data['proline']
+        data['total_acidity'],  
+        data['sugar_content'],  
+        data['mineral_content'],  
+        data['acidity_of_base'],  
+        data['element_X'],  
+        data['phenol_compound'],  
+        data['compound_Y'],  
+        data['phenolic_derivative'],  
+        data['color_agent'],  
+        data['intensity_modifier'],   
+        data['hue_value'],  
+        data['dilution_ratio'],  
+        data['protein_level'] 
     ]]
+
 
     # Scale the input data using the loaded scaler
     input_data_scaled = scaler.transform(input_data)
