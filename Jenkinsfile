@@ -17,8 +17,8 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 sh 'docker login'
-                sh 'docker tag a1_image fatimazfar/mlops_assignment:first_tag'
-                sh 'docker push fatimazfar/mlops_assignment:first_tag'
+                sh 'docker tag a1_image Fateemaaa/assignment01:first_tag'
+                sh 'docker push Fateemaaa/assignment01:first_tag'
             }
         }
     }
